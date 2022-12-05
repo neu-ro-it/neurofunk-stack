@@ -1,11 +1,11 @@
 # Remix Neurofunk Stack
 
-![The Remix Neurofunk Stack](https://repository-images.githubusercontent.com/461012689/37d5bd8b-fa9c-4ab0-893c-f0a199d5012d)
-
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
-```
-npx create-remix@latest --template remix-run/neurofunk-stack
+```sh
+npx create-remix@latest --template neu-ro-it/neurofunk-stack
+or
+pnpx create-remix@latest --template neu-ro-it/neurofunk-stack
 ```
 
 ## What's in the stack
