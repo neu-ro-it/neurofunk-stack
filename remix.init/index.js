@@ -11,14 +11,14 @@ const YAML = require("yaml");
 const cleanupCypressFiles = ({ fileEntries, isTypeScript, packageManager }) =>
   fileEntries.flatMap(([filePath, content]) => {
     let newContent = content.replace(
-      new RegExp("npx ts-node", "g"),
+      /npx ts-node/g,
       isTypeScript ? `${packageManager.exec} ts-node` : "node"
     );
 
     if (!isTypeScript) {
       newContent = newContent
-        .replace(new RegExp("create-user.ts", "g"), "create-user.js")
-        .replace(new RegExp("delete-user.ts", "g"), "delete-user.js");
+        .replace(/create-user.ts/g, "create-user.js")
+        .replace(/delete-user.ts/g, "delete-user.js");
     }
 
     return [fs.writeFile(filePath, newContent)];

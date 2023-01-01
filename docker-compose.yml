@@ -4,6 +4,7 @@ services:
     image: postgres:latest
     restart: always
     environment:
+      - PNPM_VERSION=7.1.9
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=postgres

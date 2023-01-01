@@ -41,12 +41,12 @@ tasks:
     init: docker-compose pull
     command: docker-compose up
 
-  - init: npm install
+  - init: pnpm install
     command: |
       gp await-port 5432
-      npm run setup
-      npm run build
-      npm run dev
+      pnpm run setup
+      pnpm run build
+      pnpm run dev
 
 vscode:
   extensions:
